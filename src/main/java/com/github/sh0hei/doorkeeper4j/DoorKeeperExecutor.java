@@ -10,10 +10,10 @@ import org.apache.http.impl.client.DefaultHttpClient;
 
 public class DoorKeeperExecutor {
 
-	private static final String ENDPOINT_URL = "http://api.doorkeeper.jp";
+    private static final String ENDPOINT_URL = "http://api.doorkeeper.jp";
 
-	private HttpResponse execute(HttpRequestBase request) throws ClientProtocolException, IOException {
-		HttpClient httpClient = new DefaultHttpClient();
-		return httpClient.execute(request);
-	}
+    private HttpResponse execute(HttpRequestBase request) throws ClientProtocolException, IOException {
+        HttpClient httpClient = new DefaultHttpClient();
+        return httpClient.execute(request);
+    }
 }
