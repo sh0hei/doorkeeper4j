@@ -4,5 +4,5 @@ import java.util.Map;
 
 public abstract class ParamsRequest extends DoorKeeperRequest {
 
-	public abstract Map<String, String> createParams();
+    public abstract Map<String, String> createParams();
 }
