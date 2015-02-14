@@ -1,5 +1,5 @@
 #DoorKeeper4j
-[DoorKeeper API](http://www.doorkeeperhq.com/developer/api "DoorKeeper") の Java ラッパーライブラリです。
+[DoorKeeper API](http://www.doorkeeperhq.com/developer/api "DoorKeeper") Java wrapper library
 
 [![Build Status](https://travis-ci.org/sh0hei/doorkeeper4j.png?branch=master)](https://travis-ci.org/sh0hei/doorkeeper4j)
 
@@ -95,3 +95,8 @@ QiitaClient のメソッドを使用して実行します。
         <version>0.0.1-SNAPSHOT</version>
       </dependency>
     </dependencies>
+
+doorkeeper4j
+============
+
+
