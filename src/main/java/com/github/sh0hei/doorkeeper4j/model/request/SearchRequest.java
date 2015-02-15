@@ -7,7 +7,7 @@ public class SearchRequest extends ParamsRequest {
 
     private String query;
 
-    private String[] queries;
+    private final String[] queries;
 
     public SearchRequest(String query, String... queries) {
         this.query = query;
