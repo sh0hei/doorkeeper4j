@@ -1,6 +1,8 @@
 package com.github.sh0hei.doorkeeper4j.model.response;
 
 import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Event extends DoorKeeperResponse {
@@ -123,8 +125,8 @@ public class Event extends DoorKeeperResponse {
         return updatedAt;
     }
 
-    public void setUpdatedAt(Date updatedAt) {
-        this.updatedAt = updatedAt;
+    public void setUpdatedAt(String updatedAt) throws ParseException {
+    	this.updatedAt = parse(updatedAt);
     }
 
     public String getBanner() {
@@ -176,6 +178,14 @@ public class Event extends DoorKeeperResponse {
     }
 
     private static final ThreadLocal<DateFormat> DATE_FORMAT = new ThreadLocal<DateFormat>() {
-
+        protected DateFormat initialValue() {
+            DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss +0900");
+            dateFormat.setLenient(false);
+            return dateFormat;
+        }
     };
+
+    private static Date parse(String dateString) throws ParseException {
+        return DATE_FORMAT.get().parse(dateString);
+    }
 }
