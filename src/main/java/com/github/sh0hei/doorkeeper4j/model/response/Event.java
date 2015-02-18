@@ -61,16 +61,16 @@ public class Event extends DoorKeeperResponse {
         return startsAt;
     }
 
-    public void setStartsAt(Date startsAt) {
-        this.startsAt = startsAt;
+    public void setStartsAt(String startsAt) throws ParseException {
+        this.startsAt = parse(startsAt);
     }
 
     public Date getEndsAt() {
         return endsAt;
     }
 
-    public void setEndsAt(Date endsAt) {
-        this.endsAt = endsAt;
+    public void setEndsAt(String endsAt) throws ParseException {
+        this.endsAt = parse(endsAt);
     }
 
     public String getVenueName() {
@@ -117,8 +117,8 @@ public class Event extends DoorKeeperResponse {
         return publishedAt;
     }
 
-    public void setPublishedAt(Date publishedAt) {
-        this.publishedAt = publishedAt;
+    public void setPublishedAt(String publishedAt) throws ParseException {
+        this.publishedAt = parse(publishedAt);
     }
 
     public Date getUpdatedAt() {
