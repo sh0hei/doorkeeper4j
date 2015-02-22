@@ -21,7 +21,7 @@ import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpRequestBase;
-import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.impl.client.HttpClientBuilder;
 
 import com.github.sh0hei.doorkeeper4j.model.response.DoorKeeperResponse;
 
@@ -44,7 +44,7 @@ public class DoorKeeperExecutor {
     }
 
     private HttpResponse execute(HttpRequestBase request) throws ClientProtocolException, IOException {
-        HttpClient httpClient = new DefaultHttpClient();
+        HttpClient httpClient = HttpClientBuilder.create().build();
         return httpClient.execute(request);
     }
 
