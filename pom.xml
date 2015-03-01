@@ -14,6 +14,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <sourceJavaVersion>1.7</sourceJavaVersion>
     <targetJavaVersion>1.7</targetJavaVersion>
+    <jmockit.version>0.999.4</jmockit.version>
   </properties>
 
   <dependencies>
@@ -37,6 +38,11 @@
       <artifactId>junit</artifactId>
       <version>4.11</version>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>mockit</groupId>
+      <artifactId>jmockit</artifactId>
+      <version>${jmockit.version}</version>
     </dependency>
   </dependencies>
 </project>
